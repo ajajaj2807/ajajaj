@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import DopeText from "./DopeText";
 import Slider from "./Slider";
 import Projects from "./Projects";
 import Head from "next/head";
 import { useViewportScroll, motion } from "framer-motion";
+import Modal from './Modal'
 
 export default function Home() {
   const { scrollYProgress } = useViewportScroll();
+  const [open, setOpen] = useState(false)
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -14,6 +16,9 @@ export default function Home() {
       exit={{ opacity: 0 }}
       className="page-wrapper"
     >
+      {
+        open ? <Modal close={() => setOpen(false)}/> : null
+      }
       <Head>
         <title>Ajay Yadav</title>
       </Head>
@@ -26,7 +31,7 @@ export default function Home() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { damping: 0, delay: 0.2, ease: "easeInOut" },
+          transition: { damping: 0, delay: 1, ease: "easeInOut" },
         }}
         className="landing-wrapper"
       >
@@ -39,7 +44,7 @@ export default function Home() {
           use. Currently, I am a student at IIT Kharagpur. Also, I cannot work
           without some music. 🎵
         </span>
-        <button className="cta">Let's Talk</button>
+        <button onClick={() => setOpen(true)} className="cta">Let's Talk</button>
       </motion.div>
       <Slider />
       <Projects />
@@ -51,7 +56,7 @@ export default function Home() {
         <span className="convert-l">
           So, what are you waiting for?
           <DopeText image="https://media.giphy.com/media/rVVFWyTINqG7C/giphy.gif">
-            <a href="#">Let's Talk</a>
+            <a onClick={() => setOpen(true)}>Let's Talk</a>
           </DopeText>
         </span>
       </div>

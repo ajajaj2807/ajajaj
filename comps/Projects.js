@@ -9,7 +9,7 @@ export default function Projects() {
       animate={{
         opacity: 1,
         y: 0,
-        transition: { damping: 0, delay: 0.4, ease: "easeInOut" },
+        transition: { damping: 0, delay: 1.2, ease: "easeInOut" },
       }}
       className="projects-wrapper"
     >
