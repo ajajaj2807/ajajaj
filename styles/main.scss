@@ -87,6 +87,7 @@ button.cta {
 .slider-wrapper {
   margin: 5rem 0;
   font-size: 6vw;
+  font-weight: 800;
   text-align: center;
   transition: all ease 100ms;
   .words {
@@ -314,6 +315,13 @@ a {
   .work-content {
     grid-template-columns: 1fr;
   }
+  .modal-txt {
+    font-size: 1.5rem !important;
+  }
+  .modal-content {
+    max-width: 70vw !important;
+    padding: 2.5rem 1.5rem !important;
+  }
 }
 
 .modal-wrapper {
@@ -332,13 +340,13 @@ a {
     width: 100%;
     z-index: 99;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❌</text></svg>")
-      16 0,
-    auto; /*!emojicursor.app*/
+        16 0,
+      auto; /*!emojicursor.app*/
   }
-  .modal-content{
+  .modal-content {
     position: relative;
     top: 50%;
-    max-width: 50%;
+    max-width: 50vw;
     background: #9bdddb;
     margin: auto;
     z-index: 101;
@@ -346,14 +354,14 @@ a {
     border-radius: 4px;
     padding: 2rem;
     transform: translateY(-50%);
-    .modal-txt{
+    .modal-txt {
       font-size: 2rem;
       color: #161616;
     }
-    a{
+    a {
       color: #351def;
       text-decoration: none;
-      &:hover{
+      &:hover {
         -webkit-text-stroke: #351def 1px;
         color: transparent;
       }

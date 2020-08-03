@@ -48,7 +48,14 @@ export default function Home() {
       </motion.div>
       <Slider />
       <Projects />
-      <div className="convert-wrapper">
+      <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { damping: 0, delay: 1.4, ease: "easeInOut" },
+      }}
+      className="convert-wrapper">
         <span className="convert-txt">
           You help me expand this list 👆 <br /> and I'll help you build your
           product. It's that easy ;-)
@@ -59,7 +66,7 @@ export default function Home() {
             <a onClick={() => setOpen(true)}>Let's Talk</a>
           </DopeText>
         </span>
-      </div>
+      </motion.div>
       <div className="social-wrapper">
         <div className="f-r">
           Nothing to look here, you carry on
