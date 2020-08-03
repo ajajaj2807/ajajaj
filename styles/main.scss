@@ -131,7 +131,7 @@ button.cta {
       }
       &:last-of-type{
         &::after{
-          content: '...';
+          content: '';
         }
       }
     }
@@ -249,4 +249,15 @@ a {
 }
 .work-content{
   margin: 4rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  img{
+    max-width: 100%;
+  }
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
 }
