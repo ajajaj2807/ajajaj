@@ -4,11 +4,7 @@ import useScrollPos from "../utils/useScrollPos";
 
 export default function DopeText({ children, image }) {
   const { x, y } = useMousePos();
-  const [dims, setDims] = useState({});
-  const {scroll} = useScrollPos();
-  const getDimensions = (e) => {
-    setDims({ height: e.target.naturalHeight, width: e.target.naturalWidth });
-  };
+  const { scroll } = useScrollPos();
 
   return (
     <div className="dope-wrapper">
@@ -16,11 +12,10 @@ export default function DopeText({ children, image }) {
       <div
         className="dope-image"
         style={{
-          transform: `translate(${x - Math.min(dims.width, 200) / 2}px, ${
-            y-(Math.min(dims.height, 200) / 2) + scroll}px)`,
+          transform: `translate(${x - 10}px, ${y - 30 + scroll}px)`,
         }}
       >
-        <img onLoad={(e) => getDimensions(e)} src={image} alt="lolololol" />
+        <img src={image} alt="lolololol" />
       </div>
     </div>
   );

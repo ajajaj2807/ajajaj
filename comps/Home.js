@@ -38,7 +38,7 @@ export default function Home() {
         <span className="landing-text">
           Hello there! 👋 <br />I am{" "}
           <DopeText image="https://media.giphy.com/media/lfCTKCg4sw8rm/giphy.gif">
-            Ajay
+            <span>Ajay</span>
           </DopeText>
           . I like to design and develop beautiful web apps which users love to
           use. Currently, I am a student at IIT Kharagpur. Also, I cannot work
