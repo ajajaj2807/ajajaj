@@ -87,6 +87,7 @@ export default function Home() {
         <a target="_blank" href="https://www.linkedin.com/in/ajajaj2807">
           LinkedIn
         </a>
+        <br />
         <a target="_blank" href="https://github.com/ajajaj2807">
           Github
         </a>
