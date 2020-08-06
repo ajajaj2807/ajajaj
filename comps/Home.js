@@ -91,6 +91,10 @@ export default function Home() {
         <a target="_blank" href="https://github.com/ajajaj2807">
           Github
         </a>
+        <br />
+        <a target="_blank" href="https://blog.ajajaj.me/">
+          Blog
+        </a>
         <span className="add-info">
           SDS-348,
           <br />
