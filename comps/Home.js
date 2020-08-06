@@ -4,11 +4,11 @@ import Slider from "./Slider";
 import Projects from "./Projects";
 import Head from "next/head";
 import { useViewportScroll, motion } from "framer-motion";
-import Modal from './Modal'
+import Modal from "./Modal";
 
 export default function Home() {
   const { scrollYProgress } = useViewportScroll();
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,9 +16,7 @@ export default function Home() {
       exit={{ opacity: 0 }}
       className="page-wrapper"
     >
-      {
-        open ? <Modal close={() => setOpen(false)}/> : null
-      }
+      {open ? <Modal close={() => setOpen(false)} /> : null}
       <Head>
         <title>Ajay Yadav</title>
       </Head>
@@ -44,18 +42,21 @@ export default function Home() {
           use. Currently, I am a student at IIT Kharagpur. Also, I cannot work
           without some music. 🎵
         </span>
-        <button onClick={() => setOpen(true)} className="cta">Let's Talk</button>
+        <button onClick={() => setOpen(true)} className="cta">
+          Let's Talk
+        </button>
       </motion.div>
       <Slider />
       <Projects />
       <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: { damping: 0, delay: 1.4, ease: "easeInOut" },
-      }}
-      className="convert-wrapper">
+        initial={{ opacity: 0, y: 10 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { damping: 0, delay: 1.4, ease: "easeInOut" },
+        }}
+        className="convert-wrapper"
+      >
         <span className="convert-txt">
           You help me expand this list 👆 <br /> and I'll help you build your
           product. It's that easy ;-)
@@ -84,6 +85,9 @@ export default function Home() {
         </a>
         <br />
         <a target="_blank" href="https://www.linkedin.com/in/ajajaj2807">
+          LinkedIn
+        </a>
+        <a target="_blank" href="https://github.com/ajajaj2807">
           LinkedIn
         </a>
         <span className="add-info">
