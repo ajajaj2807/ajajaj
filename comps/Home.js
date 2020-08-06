@@ -88,7 +88,7 @@ export default function Home() {
           LinkedIn
         </a>
         <a target="_blank" href="https://github.com/ajajaj2807">
-          LinkedIn
+          Github
         </a>
         <span className="add-info">
           SDS-348,
